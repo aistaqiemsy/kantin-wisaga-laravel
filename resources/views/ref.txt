@@ -1,0 +1,3 @@
+https://www.malasngoding.com/tutorial-membuat-crud-dengan-laravel/
+https://taufikh01.medium.com/membuat-crud-sederhana-dengan-laravel-8-829491c6b4bd
+
