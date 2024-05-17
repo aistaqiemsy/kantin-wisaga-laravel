@@ -30,4 +30,10 @@ class BarangController extends Controller
             ]);
             return redirect('/barang');
     }
+
+    public function HapusBarang($id) {
+        DB::table('tb_barang')->where('id_barang', $id)->delete();
+
+        return redirect('/barang');
+    }
 }

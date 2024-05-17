@@ -16,6 +16,8 @@ Route::get('/tambah', [BarangController::class, 'TambahBarang']);
 
 Route::post('/barang/simpanBarang', [BarangController::class, 'simpanBarang']);
 
+Route::get('/pegawai/hapus/{id}', [BarangController::class, 'HapusBarang']);
+
 
 // Route::get('/barang', function () {
 //     return Redirect::away('http://google.com'); // berhasil untuk pindah ke website luar
