@@ -16,7 +16,11 @@ Route::get('/tambah', [BarangController::class, 'TambahBarang']);
 
 Route::post('/barang/simpanBarang', [BarangController::class, 'simpanBarang']);
 
-Route::get('/pegawai/hapus/{id}', [BarangController::class, 'HapusBarang']);
+Route::get('/barang/hapus/{id}', [BarangController::class, 'HapusBarang']);
+
+Route::get('/barang/edit/{id}', [BarangController::class, 'UbahBarang']);
+
+Route::post('/barang/perbarui', [BarangController::class, 'PerbaruiBarang']);
 
 
 // Route::get('/barang', function () {

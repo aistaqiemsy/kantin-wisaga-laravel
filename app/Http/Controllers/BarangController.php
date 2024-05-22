@@ -20,10 +20,6 @@ class BarangController extends Controller
     public function simpanBarang(Request $request) {
         // return "Ingin tambah data ?";
         DB::table('tb_barang')->insert([
-                // 'txIdPenjual' => $request->id_penjual,
-                // 'txNama' => $request->nama,
-                // 'txHarga' => $request->harga
-
                 'id_penjual' => $request->txIdPenjual,
                 'nama' => $request->txNama,
                 'harga' => $request->txHarga
@@ -35,5 +31,20 @@ class BarangController extends Controller
         DB::table('tb_barang')->where('id_barang', $id)->delete();
 
         return redirect('/barang');
+    }
+
+    public function UbahBarang($id) {
+        $barang = DB::table('tb_barang')->where('id_barang', $id)->get();
+        //['barang' => $barang] harus sama namanya, yang dalam petik tidak menggunakan $
+        return view('ubah', ['barang' => $barang]);
+    }
+
+    public function PerbaruiBarang(Request $request) {
+        DB::table('tb_barang')->where('id_barang', $request->id)->update([
+                'id_penjual' => $request->txUpID,
+                'nama' => $request->txUpNama,
+                'harga' => $request->txUpHarga
+            ]);
+            return redirect('/barang');
     }
 }

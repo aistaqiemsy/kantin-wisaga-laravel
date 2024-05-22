@@ -10,7 +10,7 @@
         <td align="center">{{$dataBarang->id_penjual}}</td>
         <td>{{$dataBarang->nama}}</td>
         <td>{{$dataBarang->harga}}K</td>
-        <td>Ubah | <a href="/pegawai/hapus/{{$dataBarang->id_barang}}">Hapus</a></td>
+        <td><a href="/barang/edit/{{$dataBarang->id_barang}}">Ubah</a> | <a href="/barang/hapus/{{$dataBarang->id_barang}}">Hapus</a></td>
     </tr>
     @endforeach
 </table>
